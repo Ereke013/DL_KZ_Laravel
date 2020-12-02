@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-body">
                 <p class="card-title" style="font-size: 35px">dl.yeahboy.kz</p>
-                <a class="card-text" href="{{route('user')}}">В начало</a>
+                <a class="card-text" href="{{route('dlKz')}}">В начало</a>
             </div>
         </div>
         <div class="row mt-2">
@@ -20,7 +20,7 @@
                         <p class="card-title" style="font-size: 20px"> Навигация</p>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="#" aria-current="page">В начало</a>
+                                <a href="{{route('dlKz')}}" aria-current="page">В начало</a>
                             </li>
                         </ol>
                     </div>
@@ -37,42 +37,45 @@
                         <label class="mt-5" style="font-size: 35px;">Мои Курсы</label>
                         <?php
                         $i = 1;
+                        $stud = request()->session()->get('student');
                         ?>
                         @foreach($grLes as $gl)
-                            @if($gl->groupId == $user->groupId)
+                            @if($gl->groupId == $stud->groupId)
                                 @foreach($ttt as $t)
                                     @if($t->id==$gl->teachId)
                                         @if($i%2!=0)
-                                        <div class="clearfix p-2">
-                                            <div class="info"><h3 class="coursename"><a class=""
-                                                                                        href="#">[ {{$t->code}} ] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
-                                                </h3>
+                                            <div class="clearfix p-2">
+                                                <div class="info"><h3 class="coursename"><a class=""
+                                                                                            href="#">[ {{$t->code}}
+                                                            ] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="content">
+                                                    <ul>
+                                                        <li>Teacher: <a href="#">{{$t->name}} {{$t->surname}}</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="content">
-                                                <ul>
-                                                    <li>Teacher: <a href="#">{{$t->name}} {{$t->surname}}</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
                                         @endif
 
-                                            @if($i%2==0)
-                                                <div class="clearfix p-2" style="background-color: #F2F2F2">
-                                                    <div class="info"><h3 class="coursename"><a class=""
-                                                                                                href="#">[ {{$t->code}} ] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
-                                                        </h3>
-                                                    </div>
-                                                    <div class="content">
-                                                        <ul>
-                                                            <li>Teacher: <a href="#">{{$t->name}} {{$t->surname}}</a></li>
-                                                        </ul>
-                                                    </div>
+                                        @if($i%2==0)
+                                            <div class="clearfix p-2" style="background-color: #F2F2F2">
+                                                <div class="info"><h3 class="coursename"><a class=""
+                                                                                            href="#">[ {{$t->code}}
+                                                            ] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
+                                                    </h3>
                                                 </div>
+                                                <div class="content">
+                                                    <ul>
+                                                        <li>Teacher: <a href="#">{{$t->name}} {{$t->surname}}</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
 
-                                            @endif
-                                            <?php
-                                            $i += 1;
-                                            ?>
+                                        @endif
+                                        <?php
+                                        $i += 1;
+                                        ?>
                                     @endif
                                 @endforeach
                             @endif

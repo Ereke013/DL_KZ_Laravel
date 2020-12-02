@@ -73,4 +73,11 @@ class StudentsController extends Controller
 
         return redirect()->route('students-details', $id)->with('success', 'Student saved successully');
     }
+
+    public function profile($id){
+        $student = new Students();
+        $student = $student->find($id);
+
+
+    }
 }

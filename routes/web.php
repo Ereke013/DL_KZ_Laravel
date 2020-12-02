@@ -3,9 +3,16 @@
 //use Illuminate\Http\Client\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GroupLessonController;
+use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeachController;
 use App\Http\Requests\GroupsRequest;
+use App\Models\GroupLesson;
+use App\Models\Groups;
+use App\Models\Subjects;
+use App\Models\Teach;
+use App\Models\Teachers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -106,9 +113,10 @@ Route::post('/group_lessons/submit', [GroupLessonController::class, 'submit'])->
 
 Route::get('/group_lessons/{id}/edit', [GroupLessonController::class, 'grLessonsEdit'])->name('group_lessons-edit');
 
+Route::post('/group_lessons/{id}/edit', [GroupLessonController::class, 'grLessonsSave'])->name('group_lessons-save');
+
 Route::get('/group_lessons/{id}/delete', [GroupLessonController::class, 'grLessonsDelete'])->name('group_lessons-delete');
 
-Route::post('/group_lessons/{id}/edit', [GroupLessonController::class, 'grLessonsSave'])->name('group_lessons-save');
 //<- End Group lesson ->
 
 //Route::get('/subjects', function () {
@@ -116,12 +124,20 @@ Route::post('/group_lessons/{id}/edit', [GroupLessonController::class, 'grLesson
 //})->name('subjects');
 
 
+Route::get('/myProfile', function (){
+    return view('MyProfile');
+})->name('myProfile');
 
+Route::get('/dlKz', function (){
+    $teach = DB::table('teaches')
+        ->join('teachers', 'teachers.id', '=', 'teaches.teacherId')
+        ->join('subjects', 'subjects.id', '=', 'teaches.subjectId')
+        ->select('teaches.*', 'teachers.name', 'teachers.surname', 'subjects.subject_name', 'subjects.code')
+        ->get();
 
-
-
-
-
-
-
-
+    $gr_lesson = DB::table('group_lessons')
+        ->join('groups', 'groups.id', '=','group_lessons.groupId')
+        ->join('teaches', 'teaches.id', '=','group_lessons.teachId')
+        ->select('group_lessons.*','groups.group_name')->get();
+    return view('userPage', ['ttt'=>$teach, 'grLes'=>$gr_lesson, 'teachers'=>Teachers::all(), 'subjects'=>Subjects::all(), 'teaches'=>Teach::all(),'groups'=>Groups::all(),'groupSubj'=>GroupLesson::all()]);
+})->name('dlKz');
