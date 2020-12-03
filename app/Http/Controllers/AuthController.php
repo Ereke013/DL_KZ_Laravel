@@ -33,4 +33,22 @@ class AuthController extends Controller
             }
         }
     }
+
+    public function changePassword($id, Request $request){
+
+        $old_password = $request->input('old_password');
+        $new_password = $request->input('new_password');
+        $re_password = $request->input('re_password');
+
+        if($new_password==$re_password){
+            $student = new Students();
+            $student = $student->find($id);
+            if(password_verify($old_password, $student->password)){
+                $student->password = $new_password;
+                return redirect()->route('settings')->with('success', 'Password changed successfully');
+            }
+            return redirect()->route('settings')->with('error', 'Old password is incorrect');
+        }
+        return redirect()->route('settings')->with('error', 'New password and re-password is incorrect');
+    }
 }

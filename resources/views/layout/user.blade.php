@@ -22,5 +22,10 @@
         </div>
     </div>
 </div>
+<footer style="background-color: #1b1e21;" >
+    <div class="footer-copyright text-center py-3">
+        <p style="color: #ffffff">Copyright: <i class="far fa-copyright"></i> dl.yeahboy.kz 2020</p>
+    </div>
+</footer>
 </body>
 </html>

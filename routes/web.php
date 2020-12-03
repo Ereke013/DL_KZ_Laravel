@@ -141,3 +141,9 @@ Route::get('/dlKz', function (){
         ->select('group_lessons.*','groups.group_name')->get();
     return view('userPage', ['ttt'=>$teach, 'grLes'=>$gr_lesson, 'teachers'=>Teachers::all(), 'subjects'=>Subjects::all(), 'teaches'=>Teach::all(),'groups'=>Groups::all(),'groupSubj'=>GroupLesson::all()]);
 })->name('dlKz');
+
+Route::get('/settings', function(){
+    return view('settings');
+})->name('settings');
+
+Route::post('/settings/save', [AuthController::class, 'changePassword'])->name('password-save');

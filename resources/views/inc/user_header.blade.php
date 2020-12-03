@@ -39,7 +39,7 @@
                             <div class="list-group list-group-flush">
                                 <a href="{{route('myProfile')}}" class="list-group-item">My profile</a>
                                 <a href="#" class="list-group-item">My mark</a>
-                                <a href="#" class="list-group-item">Settings</a>
+                                <a href="{{route('settings')}}" class="list-group-item">Settings</a>
 {{--                                <a href="helloPage.php" class="list-group-item">Exit</a>--}}
                                 <a href="{{route('home')}}" class="list-group-item">Exit</a>
                             </div>
