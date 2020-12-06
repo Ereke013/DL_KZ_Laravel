@@ -146,4 +146,8 @@ Route::get('/settings', function(){
     return view('settings');
 })->name('settings');
 
-Route::post('/settings/save', [AuthController::class, 'changePassword'])->name('password-save');
+Route::get('/marks', function(){
+    return view('mark');
+})->name('mark');
+
+Route::post('/settings/{id}/save', [AuthController::class, 'changePassword'])->name('password-save');

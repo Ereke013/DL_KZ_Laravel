@@ -7,6 +7,7 @@ use App\Models\Groups;
 use App\Models\Students;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 
 class StudentsController extends Controller
@@ -67,7 +68,8 @@ class StudentsController extends Controller
         $student->email = $req->input('email');
         $student->speciality = $req->input('speciality');
         $student->groupId = $req->input('groupId');
-        $student->password = password_hash($req->input('password'), PASSWORD_DEFAULT);
+//        $student->password = password_hash($req->input('password'), PASSWORD_DEFAULT);
+//        $student->password = Crypt::encrypt($req->input('password'));
 
         $student->save();
 

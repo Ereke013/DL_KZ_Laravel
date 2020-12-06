@@ -60,7 +60,8 @@
                         <div class="card" style="background-color: rgba(168,168,168,0.5)">
                             <div class="card-text mt-3 ml-3">
                                 <h3 style="text-align: center">Change Password</h3>
-                                <form action="{{route('password-save')}}" method="post">
+                                <form action="{{route('password-save', $stud->id)}}" method="post">
+                                    @csrf
                                     <input type="hidden" value="{{$stud->id}}" name="id">
                                     <div class="form-group">
                                         <label>Old Password:</label>

@@ -78,10 +78,11 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label>Password:</label>
-                            <input type="password" class="form-control" name="password" value="{{ $data->password}}">
-                        </div>
+{{--                        <div class="form-group">--}}
+{{--                            <label>Password:</label>--}}
+{{--                            <input type="password" class="form-control" name="password" value="{{$data->password }}">--}}
+{{--                            <input type="password" class="form-control" name="password" value="{{Crypt::decrypt($data->password) }}">--}}
+{{--                        </div>--}}
                         <button class="btn btn-success" type="submit">Save</button>
                     </form>
                 </div>

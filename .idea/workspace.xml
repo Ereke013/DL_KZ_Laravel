@@ -19,13 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="199bb090-91ef-4b7a-a2ef-3d2863d76f78" name="Default Changelist" comment="Student profile page is ready">
-      <change afterPath="$PROJECT_DIR$/resources/views/settings.blade.php" afterDir="false" />
+    <list default="true" id="199bb090-91ef-4b7a-a2ef-3d2863d76f78" name="Default Changelist" comment="settings profile page work">
+      <change afterPath="$PROJECT_DIR$/resources/views/mark.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/messages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/helloPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/helloPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/user_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/user_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +202,13 @@
       <workItem from="1606818641222" duration="13813000" />
       <workItem from="1606858941621" duration="660000" />
       <workItem from="1606859882046" duration="318000" />
-      <workItem from="1606929654559" duration="15794000" />
+      <workItem from="1606929654559" duration="20972000" />
+      <workItem from="1606962206098" duration="2797000" />
+      <workItem from="1607016447661" duration="1832000" />
+      <workItem from="1607169181344" duration="170000" />
+      <workItem from="1607174408579" duration="1454000" />
+      <workItem from="1607197939959" duration="1781000" />
+      <workItem from="1607237715713" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="Student profile page is ready">
       <created>1606947590981</created>
@@ -209,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606947590981</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="settings profile page work">
+      <created>1606954402028</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606954402028</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,10 +240,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Student profile page is ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student profile page is ready" />
+    <MESSAGE value="settings profile page work" />
+    <option name="LAST_COMMIT_MESSAGE" value="settings profile page work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="91" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606077913018">
@@ -271,10 +288,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606231702831" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1606824434623">
+    <state x="425" y="197" key="run.anything.popup" timestamp="1606959566995">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1606824434623" />
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1606959566995" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1606055092847">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
