@@ -44,8 +44,7 @@ class AuthController extends Controller
             $student = new Students();
             $student = $student->find($id);
             if(password_verify($old_password, $student->password)){
-                $student->password = password_hash($new_password, PASSWORD_DEFAULT);
-                $student->save();
+                $student->password = $new_password;
                 return redirect()->route('settings')->with('success', 'Password changed successfully');
             }
             return redirect()->route('settings')->with('error', 'Old password is incorrect');

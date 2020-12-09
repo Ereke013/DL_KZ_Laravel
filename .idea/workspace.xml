@@ -19,14 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="199bb090-91ef-4b7a-a2ef-3d2863d76f78" name="Default Changelist" comment="settings profile page work">
-      <change afterPath="$PROJECT_DIR$/resources/views/mark.blade.php" afterDir="false" />
+    <list default="true" id="199bb090-91ef-4b7a-a2ef-3d2863d76f78" name="Default Changelist" comment="Student profile page is ready">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/helloPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/helloPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/user_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/user_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mark.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -40,6 +40,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -149,10 +154,24 @@
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/vendor/laravel/fortify" />
+      <path value="$PROJECT_DIR$/vendor/laravel/jetstream" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/ziggy" />
+      <path value="$PROJECT_DIR$/vendor/inertiajs/inertia-laravel" />
     </include_path>
   </component>
   <component name="ProjectId" id="1keJ1PWqDQjdwVdnL3BbRFgqIFl" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -202,13 +221,7 @@
       <workItem from="1606818641222" duration="13813000" />
       <workItem from="1606858941621" duration="660000" />
       <workItem from="1606859882046" duration="318000" />
-      <workItem from="1606929654559" duration="20972000" />
-      <workItem from="1606962206098" duration="2797000" />
-      <workItem from="1607016447661" duration="1832000" />
-      <workItem from="1607169181344" duration="170000" />
-      <workItem from="1607174408579" duration="1454000" />
-      <workItem from="1607197939959" duration="1781000" />
-      <workItem from="1607237715713" duration="257000" />
+      <workItem from="1606929654559" duration="15794000" />
     </task>
     <task id="LOCAL-00001" summary="Student profile page is ready">
       <created>1606947590981</created>
@@ -217,14 +230,7 @@
       <option name="project" value="LOCAL" />
       <updated>1606947590981</updated>
     </task>
-    <task id="LOCAL-00002" summary="settings profile page work">
-      <created>1606954402028</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1606954402028</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,8 +250,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Student profile page is ready" />
-    <MESSAGE value="settings profile page work" />
-    <option name="LAST_COMMIT_MESSAGE" value="settings profile page work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Student profile page is ready" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="91" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606077913018">
@@ -288,14 +293,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606231702831" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1606959566995">
+    <state x="425" y="197" key="run.anything.popup" timestamp="1606824434623">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1606959566995" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1606055092847">
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1606824434623" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1607511727663">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1606055092847" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1607511727663" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

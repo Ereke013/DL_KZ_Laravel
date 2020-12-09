@@ -36,7 +36,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
                 <!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-                <p class="navbar"><a class="btn btn-primary" href="{{route('signIn')}}">Вход</a></p>
+                <p class="navbar"><a class="btn btn-primary" href="/signIn">Вход</a></p>
             </form>
         </div>
     </nav>
@@ -73,7 +73,7 @@
                         <header class="mb-2 header  d-flex">
                             <div class="mr-2" style="width: 45px;">
                                 <img class="rounded-circle w-100"
-                                     src="/resources/img/f1" alt="">
+                                     src="resources.img" alt="">
                             </div>
                             <div class="d-flex flex-column">
                                 <h3 class="h6 font-weight-bold mb-0">Авторизация на портале </h3>
@@ -86,7 +86,7 @@
                         <div class="d-flex body-content-container">
                             <div class="mr-2 author-groups-container" style="width: 45px;">
                                 <img class="rounded-circle w-100"
-                                     src="/resources/img/g1.svg">
+                                     src="img/g1.svg">
                             </div>
 
                             <div class="no-overflow w-100">
@@ -96,8 +96,7 @@
                                             учетной записью от MS Oficce 365 (Teams)</strong></p>
                                     <p>Логин: <em>Ваш_ID@edu.iitu.kz</em><br>Пароль: <em>******</em></p>
                                     <p>
-{{--                                        <img style="width: 300px" src="/resources/img/login.PNG" alt=""></p>--}}
-                                        <img style="width: 300px" src="{{\Illuminate\Support\Facades\URL::to('/img/login.png')}}" alt=""></p>
+                                        <img style="width: 300px" src="img/login.PNG" alt=""></p>
                                 </div>
 
 
