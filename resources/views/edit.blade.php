@@ -175,5 +175,42 @@
             </div>
         </div>
     @endif
+
+    @if($letter=='group')
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <form action="{{route('group-save', $data->id)}}" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{$data->id}}">
+                        <div class="form-group">
+                            <label>Group Name:</label>
+                            <input type="text" class="form-control" name="group_name" value="{{$data->group_name}}">
+                        </div>
+                        <button class="btn btn-success" type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    @endif
+
+    @if($letter=='role')
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <form action="{{route('role-save', $data->id)}}" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{$data->id}}">
+                        <div class="form-group">
+                            <label>Role Name:</label>
+                            <input type="text" class="form-control" name="role_name" value="{{$data->role_name}}">
+                        </div>
+                        <button class="btn btn-success" type="submit">Save</button>
+                        <a class="btn btn-danger btn-lg" href="{{route('roles-delete', $data->id)}}" role="button">Delete</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    @endif
 @endsection
 

@@ -3,6 +3,7 @@
 //use Illuminate\Http\Client\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GroupLessonController;
+use App\Http\Controllers\RolesController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeachController;
 use App\Http\Requests\GroupsRequest;
@@ -34,6 +35,7 @@ Route::get('/dlKz', function () {
 Route::post('/signIn/submit', 'App\Http\Controllers\UserController@submit')->name('signIn-form');
 
 //<-Teachers->
+//Route::middleware(['security:admin'])->group();
 Route::get('/teachers', 'App\Http\Controllers\TeachersController@allData')->name('teachers');
 
 Route::post('/teachers/submit', 'App\Http\Controllers\TeachersController@submit')->name('teachers-form');
@@ -151,3 +153,31 @@ Route::get('/marks', function(){
 })->name('mark');
 
 Route::post('/settings/{id}/save', [AuthController::class, 'changePassword'])->name('password-save');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+//For User
+Route::middleware('auth:sanctum', 'verified')->group(function (){
+    Route::get('/teachers')->name('user.dashboard');
+});
+
+//For Admin
+Route::middleware('auth:sanctum', 'verified','authadmin')->group(function (){
+    Route::get('/admin')->name('admin.dashboard');
+});
+
+
+//<-Role->
+Route::get('/roles', 'App\Http\Controllers\RolesController@allData')->name('roles');
+
+Route::get('/roles/add','App\Http\Controllers\RolesController@submit' )->name('rolesAdd');
+
+Route::get('/roles/{id}/edit', 'App\Http\Controllers\RolesController@rolesEdit')->name('role-edit');
+
+Route::post('/roles/{id}/edit', 'App\Http\Controllers\RolesController@rolesSave')->name('role-save');
+
+Route::get('/roles/{id}/delete', [RolesController::class, 'rolesDelete'])->name('roles-delete');
+
+//<-End Role->

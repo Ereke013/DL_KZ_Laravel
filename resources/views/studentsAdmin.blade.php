@@ -24,6 +24,7 @@
                     <th>FULL NAME</th>
                     <th>BIRTHDAY</th>
                     <th>EMAIL</th>
+                    <th>ROLE</th>
                     <th>GROUP NAME</th>
                     <th>DETAILS</th>
                 </tr>
@@ -35,6 +36,7 @@
                         <td>{{$std->name}} {{$std->surname}}</td>
                         <td>{{$std->bday}}</td>
                         <td>{{$std->email}}</td>
+                        <td>{{ \App\Models\Role::find($std->roleId)->role_name }}</td>
                         <td>{{\App\Models\Groups::find($std->groupId)->group_name}}</td>
                         <td><a href="{{route('students-details', $std->id)}}" class="btn btn-info btn-sm">DETAILS</a>
                         </td>

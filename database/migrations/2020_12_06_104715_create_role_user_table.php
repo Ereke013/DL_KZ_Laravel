@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGroupLessonsTable extends Migration
+class CreateRoleUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateGroupLessonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('group_lessons', function (Blueprint $table) {
+        Schema::create('role_user', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('groupId')->constrained('groups')->onDelete('cascade');
-            $table->foreignId('teachId')->constrained('teaches')->onDelete('cascade');
+            $table->integer('role_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
@@ -29,6 +28,6 @@ class CreateGroupLessonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('group_lessons');
+        Schema::dropIfExists('role_user');
     }
 }

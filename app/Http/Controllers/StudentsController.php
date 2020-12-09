@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StudentsRequest;
 use App\Models\Groups;
+use App\Models\Role;
 use App\Models\Students;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
@@ -38,7 +39,12 @@ class StudentsController extends Controller
     }
     public function allData(){
         $students = Students::with('group')->get();
-        return view('studentsAdmin', ['data'=>$students], ['dataGroups' => Groups::all()]);
+//        $students = DB::table('students')
+//            ->join('roles', 'roles.id','=', 'students.roleId')
+//            ->join('groups','groups.id','=','students.groupId')
+//            ->select('students.*','groups.group_name','roles.role_name')
+//            ->get();
+        return view('studentsAdmin', ['data'=>$students, 'roles'=>Role::all()], ['dataGroups' => Groups::all()]);
     }
 
     public function studentDetails($id){
