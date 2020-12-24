@@ -17,4 +17,8 @@
 {{--    <div class="alert-success">--}}
 {{--        {{session('success')}}--}}
 {{--    </div>--}}
+@elseif(session('error'))
+    <div class="alert alert-danger mt-3" role="alert">
+        {{session('error')}}
+    </div>
 @endif

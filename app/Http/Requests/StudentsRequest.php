@@ -24,10 +24,10 @@ class StudentsRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required',
-            'surname'=> 'required',
-            'email'=> 'required|email',
-            'bday' => 'required'
+//            'name'=>'required',
+//            'surname'=> 'required',
+//            'email'=> 'required|email',
+//            'bday' => 'required'
 //            'level' => 'required|min:4|max:200',
 //            'login' => 'required|min:5|max:200',
 //            'password' => 'required|min:8|max:40'

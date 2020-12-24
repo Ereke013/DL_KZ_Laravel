@@ -7,10 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>dl.yeahboy.kz</title>
     @include('inc.nav')
+
 </head>
 <body>
+<?php
+$text = "Light";
+$color = "secondary";
+?>
 
 <header>
+{{--    @include('inc.auto_header')--}}
     <nav class="navbar navbar-expand-md navbar-light style page_header" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
@@ -36,7 +42,35 @@
             <form class="form-inline my-2 my-lg-0">
                 <!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
                 <!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-                <p class="navbar"><a class="btn btn-primary" href="/signIn">Вход</a></p>
+{{--                <p class="navbar"><a class="btn btn-primary" href="/signIn">Вход</a></p>--}}
+
+                <input type="button" name="theme" class="next btn btn-<?php echo $color; ?> mr-3" value="<?php echo $text; ?>" />
+                @if(Route::has('login'))
+                    @auth
+
+                        @if(Auth::user()->utype === "ADM")
+                            <a class="btn btn-primary" href="{{route('admin')}}"><i class="fa fa-user"></i>My account({{Auth::user()->name}})</a>
+
+
+
+
+                        @elseif(Auth::user()->utype === "STU")
+                            <a class="btn btn-primary" href="{{route('dlKz')}}"><i class="fa fa-user"></i>My account({{Auth::user()->name}})</a>
+
+                        @else
+                        <li><a href="#"><i class="fa fa-user"></i>My account({{Auth::user()->name}})</a></li>
+
+                        @endif
+
+                            <a class="ml-2 btn btn-danger" href="{{route('lgout')}}">Logout</a>
+
+                    @else
+                        <a href="{{route('login')}}" class="btn btn-primary"><i class="fa fa-lock"></i> Login</a>
+{{--                        <a href="{{route('register')}}" class="btn btn-primary"><i class="fa fa-lock"></i> Register</a>--}}
+                    @endif
+
+                @endif
+
             </form>
         </div>
     </nav>
@@ -73,7 +107,7 @@
                         <header class="mb-2 header  d-flex">
                             <div class="mr-2" style="width: 45px;">
                                 <img class="rounded-circle w-100"
-                                     src="resources.img" alt="">
+                                     src="{{Storage::disk('local')->url('img/f1.jpg')}}" alt="">
                             </div>
                             <div class="d-flex flex-column">
                                 <h3 class="h6 font-weight-bold mb-0">Авторизация на портале </h3>
@@ -85,8 +119,7 @@
                         </header>
                         <div class="d-flex body-content-container">
                             <div class="mr-2 author-groups-container" style="width: 45px;">
-                                <img class="rounded-circle w-100"
-                                     src="img/g1.svg">
+                                <img class="rounded-circle w-100"src="{{Storage::disk('local')->url('img/g1.svg')}}">
                             </div>
 
                             <div class="no-overflow w-100">
@@ -95,8 +128,7 @@
                                             авторизация на портале будет осуществляться посредством c вашей
                                             учетной записью от MS Oficce 365 (Teams)</strong></p>
                                     <p>Логин: <em>Ваш_ID@edu.iitu.kz</em><br>Пароль: <em>******</em></p>
-                                    <p>
-                                        <img style="width: 300px" src="img/login.PNG" alt=""></p>
+                                    <p><img style="width: 300px" src="{{Storage::disk('local')->url('img/login.PNG')}}" alt=""></p>
                                 </div>
 
 
@@ -168,5 +200,20 @@
     </div>
 </footer>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".next").click(function() {
+            <?php echo $var     = 1 ; ?>
+        });
+    });
+    document.cookie = "text=Light";
+</script>
+
 </body>
 </html>
+<script>
+    import Input from "@/Jetstream/Input";
+    export default {
+        components: {Input}
+    }
+</script>

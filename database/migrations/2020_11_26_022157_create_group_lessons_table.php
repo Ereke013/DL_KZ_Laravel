@@ -21,6 +21,7 @@ class CreateGroupLessonsTable extends Migration
         });
     }
 
+
     /**
      * Reverse the migrations.
      *

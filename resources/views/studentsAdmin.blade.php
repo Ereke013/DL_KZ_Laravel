@@ -24,6 +24,7 @@
                     <th>FULL NAME</th>
                     <th>BIRTHDAY</th>
                     <th>EMAIL</th>
+                    <th>ROLE</th>
                     <th>GROUP NAME</th>
                     <th>DETAILS</th>
                 </tr>
@@ -32,9 +33,10 @@
                 @foreach ($data as $std)
                     <tr>
                         <td>{{$std->id}}</td>
-                        <td>{{$std->name}} {{$std->surname}}</td>
+                        <td>{{ \App\Models\User::find($std->userId)->name }}</td>
                         <td>{{$std->bday}}</td>
-                        <td>{{$std->email}}</td>
+                        <td>{{ \App\Models\User::find($std->userId)->email }}</td>
+                        <td>{{ \App\Models\User::find($std->userId)->utype=='STU'?'Student':'Teacher'}}</td>
                         <td>{{\App\Models\Groups::find($std->groupId)->group_name}}</td>
                         <td><a href="{{route('students-details', $std->id)}}" class="btn btn-info btn-sm">DETAILS</a>
                         </td>
@@ -58,13 +60,14 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Name:</label>
-                            <input type="text" name="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Surname:</label>
-                            <input type="text" name="surname" class="form-control" required>
-                        </div>
+                            <div class="form-group">
+                                <label>User:</label>
+                                <select class="form-control" name="userId">
+                                    @foreach($users as $us)
+                                        <option value="{{$us->id}}">{{$us->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         <div class="form-group">
                             <label>Birthday:</label>
                             <input type="date" name="bday" class="form-control" required>
@@ -72,10 +75,6 @@
                         <div class="form-group">
                             <label>Phone Number:</label>
                             <input type="text" name="phoneNumber" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email:</label>
-                            <input type="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Speciality:</label>
@@ -89,15 +88,6 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label>Login:</label>
-                            <input type="text" name="login" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Password:</label>
-                            <input type="password" name="password" class="form-control" required>
-                            <label style="font-size: 12px; color: #8c8685">Password must be contains 8 characters</label>
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -105,6 +95,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </form>
 @endsection

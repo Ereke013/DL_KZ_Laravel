@@ -20,6 +20,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->text('profile_photo_path')->nullable();
+            $table->string('utype')->default('STU')->comment('ADM for Admin and STU for Student and TCH for Teacher'); //user type, and when to create usertype set default student
             $table->timestamps();
         });
     }

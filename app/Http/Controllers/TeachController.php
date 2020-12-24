@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\TeachRequest;
+use App\Models\Students;
 use App\Models\Subjects;
 use App\Models\Teach;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TeachController extends Controller
 {
@@ -52,5 +54,14 @@ class TeachController extends Controller
         $teach->save();
 
         return redirect()->route('teaches-details', $id)->with('success', 'Teacher Subject saved successully');
+    }
+
+    public function getTeach($id){
+        $teach = new Teach();
+        $subject = new Students();
+        $subject = $subject->find($id);
+        $teach = DB::table("teaches")->join('subjects', 'subjects.id', '=', 'teaches.subjectId')
+            ->where('teaches.subjectId', '=', $id)->select('teaches.*, subjects.*');
+        return view('subjectStudent', ['data'=>$teach]);
     }
 }

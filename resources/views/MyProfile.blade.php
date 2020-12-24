@@ -57,7 +57,10 @@
                         <div class="card" style="background-color: #F2F2F2">
                             <div class="card-text mt-3 ml-3">
                                 <?php
-                                $stud = request()->session()->get('student');
+//                                $stud = request()->session()->get('student');
+                                use App\Models\Students;use Illuminate\Support\Facades\DB;
+                                $stud = new Students();
+                                $stud = DB::table('students')->join('users', 'students.userId','=', 'users.id')->where('students.userId', '=',Auth::user()->id)->select('students.*' ,'users.name')->first();
                                 $teach = DB::table('teaches')
                                     ->join('teachers', 'teachers.id', '=', 'teaches.teacherId')
                                     ->join('subjects', 'subjects.id', '=', 'teaches.subjectId')
@@ -98,7 +101,7 @@
                         ?>
                         <div class="card-text">
                             <label><strong>Email address</strong></label><br>
-                            <label><a href="#">{{$stud->email}}</a></label><br><br>
+                            <label><a href="#">{{\App\Models\User::find($stud->userId)->email}}</a></label><br><br>
                             <label><strong>Country</strong></label><br>
                             <label>Kazakhstan</label><br><br>
                             <label><strong>City/town</strong></label><br>

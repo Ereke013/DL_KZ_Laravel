@@ -12,7 +12,7 @@
 <body>
 @include('inc.user_header')
 
-<div>
+<div style="min-height: 600px">
     <div class="container">
         @include('inc.messages')
     </div>

@@ -8,8 +8,10 @@ use App\Models\Students;
 use App\Models\Subjects;
 use App\Models\Teach;
 use App\Models\Teachers;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -20,6 +22,7 @@ class AuthController extends Controller
         $password = $request->input('password');
 
         if($login=='admin' && $password=='admin'){
+            $request->session()->put('admin', "admin");
             return redirect(route('admin'));
         }
         else {
@@ -43,8 +46,12 @@ class AuthController extends Controller
         if($new_password==$re_password){
             $student = new Students();
             $student = $student->find($id);
-            if(password_verify($old_password, $student->password)){
-                $student->password = $new_password;
+
+            $user = new User();
+            $user = $user->find($student->userId);
+            if(password_verify($old_password, $user->password)){
+                $user->password = Hash::make($new_password);
+                $user->save();
                 return redirect()->route('settings')->with('success', 'Password changed successfully');
             }
             return redirect()->route('settings')->with('error', 'Old password is incorrect');

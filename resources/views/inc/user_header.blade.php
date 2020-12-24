@@ -18,10 +18,10 @@
                 </div>
             </li>
         </ul>
-        <?php
-
-        $stud = request()->session()->get('student');
-        ?>
+<!--        --><?php
+//
+//        $stud = request()->session()->get('student');
+//        ?>
         <form class="form-inline my-2 my-lg-0 mr-5">
             <!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
             <!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
@@ -30,7 +30,7 @@
 
                     <a class="nav-link dropdown-toggle" href="#" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{$stud->name}} {{$stud->surname}}
+                        {{Auth::user()->name}}
                         <img src="https://dl.iitu.kz/theme/image.php/classic/core/1602665137/u/f2"
                              width="35" height="35" aria-hidden="true">
                     </a>
@@ -38,7 +38,7 @@
                         <div class="card">
                             <div class="list-group list-group-flush">
                                 <a href="{{route('myProfile')}}" class="list-group-item">My profile</a>
-                                <a href="#" class="list-group-item">My mark</a>
+                                <a href="{{route('myMark')}}" class="list-group-item">My mark</a>
                                 <a href="{{route('settings')}}" class="list-group-item">Settings</a>
 {{--                                <a href="helloPage.php" class="list-group-item">Exit</a>--}}
                                 <a href="{{route('home')}}" class="list-group-item">Exit</a>

@@ -16,6 +16,7 @@
         @include('inc.choose')
 {{--    @endif--}}
     <div class="container">
+
         @include('inc.messages')
         <div class="row">
             <div class="col-12">

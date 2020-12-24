@@ -36,8 +36,14 @@
                         </div>
                         <label class="mt-5" style="font-size: 35px;">Мои Курсы</label>
                         <?php
+                        use App\Models\Students;use Illuminate\Support\Facades\DB;
                         $i = 1;
-                        $stud = request()->session()->get('student');
+                        $x = Auth::user()->id;
+//                        echo $x;
+//                        echo $i;
+                        $stud = new Students();
+                        $stud = DB::table('students')->join('users', 'students.userId','=', 'users.id')->where('students.userId', '=',$x)->select('students.*' ,'users.name')->first();
+
                         ?>
                         @foreach($grLes as $gl)
                             @if($gl->groupId == $stud->groupId)
@@ -45,9 +51,7 @@
                                     @if($t->id==$gl->teachId)
                                         @if($i%2!=0)
                                             <div class="clearfix p-2">
-                                                <div class="info"><h3 class="coursename"><a class=""
-                                                                                            href="#">[ {{$t->code}}
-                                                            ] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
+                                                <div class="info"><h3 class="coursename"><a class="" href="{{route('subjectUser',\App\Models\Subjects::find($t->subjectId)->id)}}">[ {{$t->code}}] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
                                                     </h3>
                                                 </div>
                                                 <div class="content">
@@ -60,9 +64,7 @@
 
                                         @if($i%2==0)
                                             <div class="clearfix p-2" style="background-color: #F2F2F2">
-                                                <div class="info"><h3 class="coursename"><a class=""
-                                                                                            href="#">[ {{$t->code}}
-                                                            ] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
+                                                <div class="info"><h3 class="coursename"><a class="{{route('subjectUser',\App\Models\Subjects::find($t->subjectId)->id)}}" href="#">[ {{$t->code}} ] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
                                                     </h3>
                                                 </div>
                                                 <div class="content">
@@ -80,59 +82,6 @@
                                 @endforeach
                             @endif
                         @endforeach
-                        {{--                                            <div class="clearfix p-2">--}}
-                        {{--                                                <div class="info"><h3 class="coursename"><a class="" href="#">11667 ArchItecture and--}}
-                        {{--                                                            OrganIzatIon of Computer Systems (Coursera КИИБ) 2020-2021/1</a></h3>--}}
-                        {{--                                                </div>--}}
-                        {{--                                                <div class="content">--}}
-                        {{--                                                    <ul>--}}
-                        {{--                                                        <li>Teacher: <a href="#">Madina Ipalakova</a></li>--}}
-                        {{--                                                        <li>Teacher: <a href="#">Nurgul Nalgozhina</a></li>--}}
-                        {{--                                                    </ul>--}}
-                        {{--                                                </div>--}}
-                        {{--                                            </div>--}}
-
-                        {{--                    <?php--}}
-                        {{--                        $n = 1; ?>--}}
-                        {{--                        @foreach($subjects as $subj)--}}
-
-                        {{--                        <?php--}}
-                        {{--                        if($n%2!=0) {--}}
-
-                        {{--                        ?>--}}
-                        {{--                        <div class="clearfix p-2">--}}
-                        {{--                            <div class="info"><h3 class="coursename"><a class=""--}}
-                        {{--                                                                        href="#"> {{$subj->name}} 2020-2021/1</a>--}}
-                        {{--                                </h3>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div class="content">--}}
-                        {{--                                <ul>--}}
-                        {{--                                    <li>Teacher: <a href="#">{{$subj->teachId->teacherId->name}} {{$subj->teachId->teacherId->surname}}</a></li>--}}
-                        {{--                                </ul>--}}
-                        {{--                            </div>--}}
-
-                        {{--                        </div>--}}
-                        {{--                        <?php--}}
-                        {{--                        }--}}
-                        {{--                        else{--}}
-
-                        {{--                        ?>--}}
-                        {{--                        <div class="clearfix p-2" style="background-color: #F2F2F2">--}}
-                        {{--                            <div class="info"><h3 class="coursename"><a class=""--}}
-                        {{--                                                                        href="subjects.html">{{$subj->teachId->subjectId->subject_name}} 2020-2021/1</a>--}}
-                        {{--                                </h3>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div class="content">--}}
-                        {{--                                <ul>--}}
-                        {{--                                    <li>Teacher: <a href="#">{{$subj->teachId->teacherId->name}} {{$subj->teachId->teacherId->surname}}</a></li>--}}
-                        {{--                                </ul>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-                        {{--                    <?php--}}
-                        {{--                    }--}}
-                        {{--                    $n++;--}}
-                        {{--                    ?>--}}
-                        {{--                        @endforeach--}}
                     </div>
                 </div>
             </div>

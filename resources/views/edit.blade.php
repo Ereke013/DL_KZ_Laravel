@@ -45,11 +45,7 @@
                         <input type="hidden" name="id" value="{{$data->id}}">
                         <div class="form-group">
                             <label>Name:</label>
-                            <input type="text" class="form-control" name="name" value="{{$data->name}}">
-                        </div>
-                        <div class="form-group">
-                            <label>Surname:</label>
-                            <input type="text" class="form-control" name="surname" value="{{$data->surname}}">
+                            <input type="text" class="form-control" name="name" value="{{\App\Models\User::find($data->userId)->name}}">
                         </div>
                         <div class="form-group">
                             <label>Birthdate:</label>
@@ -61,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label>Email:</label>
-                            <input type="email" class="form-control" name="email" value="{{$data->email}}">
+                            <input type="email" class="form-control" name="email" value="{{\App\Models\User::find($data->userId)->email}}">
                         </div>
                         <div class="form-group">
                             <label>Speciality:</label>
@@ -78,10 +74,6 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label>Password:</label>
-                            <input type="password" class="form-control" name="password" value="{{ $data->password}}">
-                        </div>
                         <button class="btn btn-success" type="submit">Save</button>
                     </form>
                 </div>
@@ -169,6 +161,43 @@
                             </select>
                         </div>
                         <button class="btn btn-success" type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    @endif
+
+{{--    @if($letter=='group')--}}
+{{--        <div class="container mt-5">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-6 offset-3">--}}
+{{--                    <form action="{{route('group-save', $data->id)}}" method="post">--}}
+{{--                        @csrf--}}
+{{--                        <input type="hidden" name="id" value="{{$data->id}}">--}}
+{{--                        <div class="form-group">--}}
+{{--                            <label>Group Name:</label>--}}
+{{--                            <input type="text" class="form-control" name="group_name" value="{{$data->group_name}}">--}}
+{{--                        </div>--}}
+{{--                        <button class="btn btn-success" type="submit">Save</button>--}}
+{{--                    </form>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    @endif--}}
+
+    @if($letter=='role')
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <form action="{{route('role-save', $data->id)}}" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{$data->id}}">
+                        <div class="form-group">
+                            <label>Role Name:</label>
+                            <input type="text" class="form-control" name="role_name" value="{{$data->role_name}}">
+                        </div>
+                        <button class="btn btn-success" type="submit">Save</button>
+                        <a class="btn btn-danger btn-lg" href="{{route('roles-delete', $data->id)}}" role="button">Delete</a>
                     </form>
                 </div>
             </div>

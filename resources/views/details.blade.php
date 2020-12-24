@@ -21,8 +21,8 @@
     @if($letter=='student')
         <div class="container mt-5">
             <div class="jumbotron">
-                <h1 class="display-4">{{$data->name}} {{$data->surname}}</h1>
-                <p class="lead">{{\App\Models\Groups::find($data->groupId)->group_name}}, email: {{$data->email}}</p>
+                <h1 class="display-4">{{\App\Models\User::find($data->userId)->name}}</h1>
+                <p class="lead">{{\App\Models\Groups::find($data->groupId)->group_name}}, email: {{\App\Models\User::find($data->userId)->email}}</p>
                 <hr class="my-4">
                 <p>Studies from {{$data->created_at}}</p>
                 <a class="btn btn-primary btn-lg" href="{{route('student-edit', $data->id)}}" role="button">Edit</a>
