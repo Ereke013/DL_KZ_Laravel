@@ -7,16 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>dl.yeahboy.kz</title>
     @include('inc.nav')
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+{{--    <script src="resources/js/style.js"></script>--}}
 </head>
 <body>
 <?php
-$text = "Light";
 $color = "secondary";
+if(isset($_COOKIE['mycookie'])){
+    $text = $_COOKIE['mycookie'];
+}
+else
+    $text = "DARK"
 ?>
 
 <header>
 {{--    @include('inc.auto_header')--}}
+
     <nav class="navbar navbar-expand-md navbar-light style page_header" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
@@ -39,12 +45,8 @@ $color = "secondary";
                     </div>
                 </li>
             </ul>
+            <button class="theme btn btn-<?php echo $color; ?> mr-3" >DARK</button>
             <form class="form-inline my-2 my-lg-0">
-                <!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-                <!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-{{--                <p class="navbar"><a class="btn btn-primary" href="/signIn">Вход</a></p>--}}
-
-                <input type="button" name="theme" class="next btn btn-<?php echo $color; ?> mr-3" value="<?php echo $text; ?>" />
                 @if(Route::has('login'))
                     @auth
 
@@ -201,12 +203,25 @@ $color = "secondary";
 </footer>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $(".next").click(function() {
-            <?php echo $var     = 1 ; ?>
-        });
+    $('.theme').click(function(){
+        var $this = $(this);
+        $this.toggleClass('theme');
+        if($this.hasClass('theme')){
+            $this.text('DARK');
+        } else {
+            $this.text('LIGHT');
+        }
     });
-    document.cookie = "text=Light";
+
+    $('.color').click(function(){
+        var $this = $(this);
+        $this.toggleClass('color');
+        if($this.hasClass('color')){
+            $this.text('dark');
+        } else {
+            $this.text('light');
+        }
+    });
 </script>
 
 </body>
