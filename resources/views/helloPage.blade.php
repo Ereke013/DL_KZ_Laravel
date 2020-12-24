@@ -23,29 +23,28 @@ else
 <header>
 {{--    @include('inc.auto_header')--}}
 
-    <nav class="navbar navbar-expand-md navbar-light style page_header" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-">
+    <nav class="navbar nnn navbar-expand-md navbar-light style page_header" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand ml-5" href="#">dl.yeahboy.kz</a>
+        <a id="dl" class="navbar-brand ml-5" href="{{route('home')}}">dl.yeahboy.kz</a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    <a id="ssil" class="nav-link dropdown-toggle" href="{{route('home')}}" id="navbarDropdownMenuLink" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Русский(ru)
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Русский(ru)</a>
-                        <a class="dropdown-item" href="#">English(en)</a>
-                        <a class="dropdown-item" href="#">Қазақша(kk)</a>
+                        <a class="dropdown-item" id="ssil2" href="#">Русский(ru)</a>
+                        <a class="dropdown-item" id="ssil2" href="#">English(en)</a>
+                        <a class="dropdown-item" id="ssil2" href="#">Қазақша(kk)</a>
                     </div>
                 </li>
             </ul>
-            <button class="theme btn btn-<?php echo $color; ?> mr-3" >DARK</button>
+            <button class="theme stylebutton btn btn-<?php echo $color; ?> mr-3" onclick="submitButtonStyle()" type="submit">DARK</button>
             <form class="form-inline my-2 my-lg-0">
                 @if(Route::has('login'))
                     @auth
@@ -79,41 +78,41 @@ else
 </header>
 
 <div class="m-3 animate-bottom" style="">
-    <div class="card">
-        <div class="card-body">
-            <p class="card-title" style="font-size: 35px">dl.yeahboy.kz</p>
-            <a class="card-text" href="helloPage.php">В начало</a>
+    <div class="card" id="bodyDiv">
+        <div class="card-body nnn">
+            <p class="card-title" style="font-size: 35px" id="ssil3">dl.yeahboy.kz</p>
+            <a class="card-text" href="{{route('home')}}">В начало</a>
         </div>
     </div>
     <div class="row mt-2">
         <div class="col-sm-2 mt-3">
-            <div class="card">
+            <div class="card" id="bodyDiv2">
                 <div class="card-body">
-                    <p class="card-title" style="font-size: 20px"> Навигация</p>
-                    <ol class="breadcrumb">
+                    <p class="card-title" style="font-size: 20px" id="ssil4"> Навигация</p>
+                    <ol class="breadcrumb bgc">
                         <li class="breadcrumb-item">
-                            <a href="helloPage.php" aria-current="page">В начало</a>
+                            <a href="{{'home'}}" aria-current="page">В начало</a>
                         </li>
                     </ol>
                 </div>
             </div>
         </div>
         <div class="col-sm-10 mt-3 d-flex flex-column">
-            <div class="card">
+            <div class="card bgc2">
                 <div class="card-body">
-                    <p class="card-title" style="font-size: 30px"> Новости сайта</p>
+                    <p class="card-title" style="font-size: 30px" id="ssil5"> Новости сайта</p>
                 </div>
 
                 <div class="m-3">
-                    <div class="card pl-1 pt-2">
+                    <div class="card pl-1 pt-2 bgc3">
                         <header class="mb-2 header  d-flex">
                             <div class="mr-2" style="width: 45px;">
                                 <img class="rounded-circle w-100"
                                      src="{{Storage::disk('local')->url('img/f1.jpg')}}" alt="">
                             </div>
                             <div class="d-flex flex-column">
-                                <h3 class="h6 font-weight-bold mb-0">Авторизация на портале </h3>
-                                <address tabindex="-1">
+                                <h3 class="h6 font-weight-bold mb-0" id="ssil6">Авторизация на портале </h3>
+                                <address tabindex="-1" id="ssil7">
                                     от <a href="#">Admin</a> -
                                     <time>Wednesday, 21 October 2020, 18:07</time>
                                 </address>
@@ -126,10 +125,10 @@ else
 
                             <div class="no-overflow w-100">
                                 <div>
-                                    <p><strong>Уважаемые пользователи портала dl.yeahboy.kz, с 20 октября 2020 г.
+                                    <p><strong id="ssil8">Уважаемые пользователи портала dl.yeahboy.kz, с 20 октября 2020 г.
                                             авторизация на портале будет осуществляться посредством c вашей
-                                            учетной записью от MS Oficce 365 (Teams)</strong></p>
-                                    <p>Логин: <em>Ваш_ID@edu.iitu.kz</em><br>Пароль: <em>******</em></p>
+                                            учетной записью от университета</strong></p>
+                                    <p id="ssil9">Логин: <em>Ваш_Login@example.com</em><br>Пароль: <em>******</em></p>
                                     <p><img style="width: 300px" src="{{Storage::disk('local')->url('img/login.PNG')}}" alt=""></p>
                                 </div>
 
@@ -156,17 +155,17 @@ else
                 </div>
 
                 <div class="m-3">
-                    <div class="card pl-1 pt-2">
+                    <div class="card pl-1 pt-2 bgc4">
                         <header class="mb-2 header d-flex">
                             <div class="mr-2" style="width: 45px;">
                                 <img class="rounded-circle w-100"
                                      src="https://dl.iitu.kz/theme/image.php/classic/core/1602665137/u/f2" alt="">
                             </div>
                             <div class="d-flex flex-column">
-                                <h3 class="h6 font-weight-bold mb-0">Степуха </h3>
+                                <h3 class="h6 font-weight-bold mb-0" id="ssil10">Степуха </h3>
                                 <address tabindex="-1">
                                     от <a href="#">Student activator</a> -
-                                    <time>Tuesday, 20 October 2020, 20:00</time>
+                                    <time id="ssil11">Tuesday, 20 October 2020, 20:00</time>
                                 </address>
                             </div>
                         </header>
@@ -178,7 +177,7 @@ else
 
                             <div class="w-100">
                                 <div>
-                                    <p><strong>Уважаемые студенты просим вас ждать! Мы тоже ждем степуху</strong></p>
+                                    <p><strong id="ssil12">Уважаемые студенты просим вас ждать! Мы тоже ждем степуху</strong></p>
 
                                     <p>
                                         <img style="width: 300px"
@@ -207,21 +206,65 @@ else
         var $this = $(this);
         $this.toggleClass('theme');
         if($this.hasClass('theme')){
-            $this.text('DARK');
-        } else {
             $this.text('LIGHT');
+            document.getElementsByClassName("stylebutton")[0].style.backgroundColor = "yellow";
+            document.getElementsByClassName("stylebutton")[0].style.color = "black";
+            document.getElementsByClassName("nnn")[0].style.backgroundColor = "#333236";
+            document.getElementsByClassName("nnn")[0].style.color = "yellow";
+            document.getElementById("dl").style.color="yellow"
+            document.getElementById("ssil").style.color="yellow"
+            document.getElementById("ssil2").style.color="yellow"
+            document.getElementById("ssil3").style.color="yellow"
+            document.getElementById("ssil4").style.color="yellow"
+            document.getElementById("ssil5").style.color="yellow"
+            document.getElementById("ssil6").style.color="yellow"
+            document.getElementById("ssil7").style.color="yellow"
+            document.getElementById("ssil8").style.color="yellow"
+            document.getElementById("ssil9").style.color="yellow"
+            document.getElementById("ssil10").style.color="yellow"
+            document.getElementById("ssil11").style.color="yellow"
+            document.getElementById("ssil12").style.color="yellow"
+            // document.getElementById("ssil13").style.color="yellow"
+            // document.getElementById("ssil14").style.color="yellow"
+            document.getElementById("bodyDiv").style.backgroundColor="#52493B";
+            document.getElementById("bodyDiv2").style.backgroundColor="#52493B";
+            document.getElementsByClassName("bgc")[0].style.backgroundColor = "yellow";
+            document.getElementsByClassName("bgc2")[0].style.backgroundColor = "#52493B";
+            document.getElementsByClassName("bgc3")[0].style.backgroundColor = "#0C3F1C";
+            document.getElementsByClassName("bgc4")[0].style.backgroundColor = "#0C3F1C";
+            document.body.style.backgroundColor="#333236";
+
+        } else {
+            $this.text('DARK');
+            document.getElementsByClassName("stylebutton")[0].style.backgroundColor = "#333236";
+            document.getElementsByClassName("stylebutton")[0].style.color = "white";
+            document.getElementsByClassName("nnn")[0].style.backgroundColor = "";
+            document.getElementsByClassName("nnn")[0].style.color = "black";
+            document.getElementById("dl").style.color="black"
+            document.getElementById("ssil").style.color="black"
+            document.getElementById("ssil2").style.color="black"
+            document.getElementById("ssil3").style.color="black"
+            document.getElementById("ssil4").style.color="black"
+            document.getElementById("ssil5").style.color="black"
+            document.getElementById("ssil6").style.color="black"
+            document.getElementById("ssil7").style.color="black"
+            document.getElementById("ssil8").style.color="black"
+            document.getElementById("ssil9").style.color="black"
+            document.getElementById("ssil10").style.color="black"
+            document.getElementById("ssil11").style.color="black"
+            document.getElementById("ssil12").style.color="black"
+            // document.getElementById("ssil13").style.color="yellow"
+            // document.getElementById("ssil14").style.color="yellow"
+            document.getElementById("bodyDiv").style.backgroundColor="";
+            document.getElementById("bodyDiv2").style.backgroundColor="";
+            document.getElementsByClassName("bgc")[0].style.backgroundColor = "";
+            document.getElementsByClassName("bgc2")[0].style.backgroundColor = "";
+            document.getElementsByClassName("bgc3")[0].style.backgroundColor = "";
+            document.getElementsByClassName("bgc4")[0].style.backgroundColor = "";
+            document.body.style.backgroundColor="";
         }
     });
 
-    $('.color').click(function(){
-        var $this = $(this);
-        $this.toggleClass('color');
-        if($this.hasClass('color')){
-            $this.text('dark');
-        } else {
-            $this.text('light');
-        }
-    });
 </script>
 
 </body>

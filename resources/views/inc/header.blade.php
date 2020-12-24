@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light"
      style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);">
-    <a class="navbar-brand ml-5" href="{{route('admin')}}">dl.yeahboy.kz</a>
+    <a class="navbar-brand ml-5" id="dl" href="{{route('admin')}}">dl.yeahboy.kz</a>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-lg-0">
@@ -29,7 +29,7 @@
                         <img src="https://dl.iitu.kz/theme/image.php/classic/core/1602665137/u/f2"
                              width="35" height="35" aria-hidden="true">
                     </a>
-                    <div></div>
+{{--                    <div></div>--}}
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <div class="card">
                             <div class="list-group list-group-flush">
@@ -42,3 +42,6 @@
         </form>
     </div>
 </nav>
+
+
+

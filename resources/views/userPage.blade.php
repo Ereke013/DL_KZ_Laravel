@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="m-3">
-        <div class="card">
+        <div class="card" id="crd">
             <div class="card-body">
                 <p class="card-title" style="font-size: 35px">dl.yeahboy.kz</p>
                 <a class="card-text" href="{{route('dlKz')}}">В начало</a>
@@ -15,7 +15,7 @@
         </div>
         <div class="row mt-2">
             <div class="col-sm-2 mt-3">
-                <div class="card">
+                <div class="card" id="crd2">
                     <div class="card-body">
                         <p class="card-title" style="font-size: 20px"> Навигация</p>
                         <ol class="breadcrumb">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="col-sm-10 mt-3 d-flex flex-column">
-                <div class="card">
+                <div class="card" id="crd3">
                     <div class="card-body">
                         <div class="d-flex" style="">
                             <label class="mr-2 mt-1"> Search subject</label>
@@ -63,7 +63,7 @@
                                         @endif
 
                                         @if($i%2==0)
-                                            <div class="clearfix p-2" style="background-color: #F2F2F2">
+                                            <div class="clearfix p-2" id="erekshe" style="background-color: #F2F2F2">
                                                 <div class="info"><h3 class="coursename"><a class="{{route('subjectUser',\App\Models\Subjects::find($t->subjectId)->id)}}" href="#">[ {{$t->code}} ] {{$t->subject_name}} ({{$t->name}} {{$t->surname}}) </a>
                                                     </h3>
                                                 </div>

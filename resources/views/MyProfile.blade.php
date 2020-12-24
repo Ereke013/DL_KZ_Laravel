@@ -10,7 +10,7 @@
         <div class="row mt-1">
             <!--    <div class="col-sm-2"></div>-->
             <div class="col-sm-12">
-                <div class="card">
+                <div class="card" id="crd">
                     <div class="card-body">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-sm-2 mt-3">
-                <div class="card">
+                <div class="card" id="crd2">
                     <div class="card-body">
                         <p class="card-title" style="font-size: 20px"> Навигация</p>
                         <a href="{{route('dlKz')}}" class="card-text" aria-current="page">В начало</a>
@@ -49,7 +49,7 @@
             </div>
 
             <div class="col-sm-10 mt-3">
-                <div class="card">
+                <div class="card" id="crd3">
                     <div class="card-body">
                         <div class="card-title"><h3>My courses</h3></div>
                         <!--                <p style="font-size: 15px;"><strong>Sapakova S.</strong></p>-->

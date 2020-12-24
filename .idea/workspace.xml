@@ -19,13 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cf412b-c7ff-4877-9478-d7e246efe456" name="Default Changelist" comment="pochti bitti">
-      <change afterPath="$PROJECT_DIR$/app/Models/studentMark.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/style.js" afterDir="false" />
+    <list default="true" id="47cf412b-c7ff-4877-9478-d7e246efe456" name="Default Changelist" comment="adding css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RolesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RolesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/MyProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/MyProfile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/helloPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/helloPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/user_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/user_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/userPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/userPage.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608810708893</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding css">
+      <created>1608825189213</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608825189213</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +295,8 @@
     <MESSAGE value="settings profile page work" />
     <MESSAGE value="before installation auth" />
     <MESSAGE value="pochti bitti" />
-    <option name="LAST_COMMIT_MESSAGE" value="pochti bitti" />
+    <MESSAGE value="adding css" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="91" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606077913018">
@@ -328,10 +339,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606231702831" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1608811102032">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1608825248423">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1608811102032" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1608825248423" />
+    <state x="97" y="98" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1608835516400">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="97" y="98" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1608835516400" />
     <state x="586" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607263767904">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

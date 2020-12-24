@@ -32,7 +32,7 @@ class RolesController extends Controller
     public function rolesDelete($id){
         $role = new Role();
         $role->find($id)->delete();
-        return redirect()->route('role');
+        return redirect()->route('roles');
     }
 
     public function rolesSave($id, RoleRequest $req){
