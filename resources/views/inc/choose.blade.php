@@ -11,7 +11,7 @@
                 <a class="btn btn-success" href="{{route('group_lessons')}}">Group Lessons</a>
 {{--                <a class="btn btn-success" href="{{route('roles')}}">Roles</a>--}}
                 <a class="btn btn-success" href="{{route('users')}}">Users</a>
-                <a class="btn btn-success" href="{{route('register')}}">Create User</a>
+{{--                <a class="btn btn-success" href="{{route('register')}}">Create User</a>--}}
         </div>
     </div>
 </div>

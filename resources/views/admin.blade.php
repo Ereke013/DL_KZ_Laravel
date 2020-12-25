@@ -236,6 +236,7 @@
                     <tr>
                         <th>ID</th>
                         <th>User full name</th>
+                        <th>User roles</th>
                         <th>DETAILS</th>
                     </tr>
                     </thead>
@@ -244,6 +245,7 @@
                          <tr>
                             <td>{{$sub->id}}</td>
                             <td>{{$sub->name}} {{$sub->surname}}</td>
+                            <td>{{$sub->utype}}</td>
                             <td><a href="#" class="btn btn-info btn-sm">Edit</a>
                             </td>
                         </tr>
@@ -280,7 +282,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Add Subject</button>
+                            <button type="submit" class="btn btn-primary">Add Student</button>
                         </div>
                     </div>
                 </div>

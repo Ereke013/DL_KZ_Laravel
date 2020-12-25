@@ -14,7 +14,7 @@
 <?php
 $color = "secondary";
 if(isset($_COOKIE['mycookie'])){
-    $text = $_COOKIE['mycookie'];
+//    $text = $_COOKIE['mycookie'];s
 }
 else
     $text = "DARK"
@@ -28,12 +28,12 @@ else
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a id="dl" class="navbar-brand ml-5" href="{{route('home')}}">dl.yeahboy.kz</a>
+        <a id="dl" class="navbar-brand ml-5" href="#">dl.yeahboy.kz</a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-lg-0">
                 <li class="nav-item dropdown">
-                    <a id="ssil" class="nav-link dropdown-toggle" href="{{route('home')}}" id="navbarDropdownMenuLink" role="button"
+                    <a id="ssil" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Русский(ru)
                     </a>
@@ -44,7 +44,7 @@ else
                     </div>
                 </li>
             </ul>
-            <button class="theme stylebutton btn btn-<?php echo $color; ?> mr-3" onclick="submitButtonStyle()" type="submit">DARK</button>
+            <button class="theme stylebutton btn btn-<?php echo $color; ?> mr-3" id="theme" type="submit">DARK</button>
             <form class="form-inline my-2 my-lg-0">
                 @if(Route::has('login'))
                     @auth
@@ -81,7 +81,7 @@ else
     <div class="card" id="bodyDiv">
         <div class="card-body nnn">
             <p class="card-title" style="font-size: 35px" id="ssil3">dl.yeahboy.kz</p>
-            <a class="card-text" href="{{route('home')}}">В начало</a>
+            <a class="card-text" href="#">В начало</a>
         </div>
     </div>
     <div class="row mt-2">
@@ -91,7 +91,7 @@ else
                     <p class="card-title" style="font-size: 20px" id="ssil4"> Навигация</p>
                     <ol class="breadcrumb bgc">
                         <li class="breadcrumb-item">
-                            <a href="{{'home'}}" aria-current="page">В начало</a>
+                            <a href="#" aria-current="page">В начало</a>
                         </li>
                     </ol>
                 </div>
@@ -108,7 +108,7 @@ else
                         <header class="mb-2 header  d-flex">
                             <div class="mr-2" style="width: 45px;">
                                 <img class="rounded-circle w-100"
-                                     src="{{Storage::disk('local')->url('img/f1.jpg')}}" alt="">
+                                     src="{{Storage::disk('local')->url('img/avatar.png')}}" alt="">
                             </div>
                             <div class="d-flex flex-column">
                                 <h3 class="h6 font-weight-bold mb-0" id="ssil6">Авторизация на портале </h3>
@@ -202,14 +202,14 @@ else
 </footer>
 
 <script type="text/javascript">
-    $('.theme').click(function(){
+    $('#theme').click(function(){
         var $this = $(this);
         $this.toggleClass('theme');
-        if($this.hasClass('theme')){
+        if(!$this.hasClass('theme')){
             $this.text('LIGHT');
             document.getElementsByClassName("stylebutton")[0].style.backgroundColor = "yellow";
             document.getElementsByClassName("stylebutton")[0].style.color = "black";
-            document.getElementsByClassName("nnn")[0].style.backgroundColor = "#333236";
+            document.getElementsByClassName("nnn")[0].style.backgroundColor = "#202020";
             document.getElementsByClassName("nnn")[0].style.color = "yellow";
             document.getElementById("dl").style.color="yellow"
             document.getElementById("ssil").style.color="yellow"
@@ -226,13 +226,14 @@ else
             document.getElementById("ssil12").style.color="yellow"
             // document.getElementById("ssil13").style.color="yellow"
             // document.getElementById("ssil14").style.color="yellow"
-            document.getElementById("bodyDiv").style.backgroundColor="#52493B";
-            document.getElementById("bodyDiv2").style.backgroundColor="#52493B";
+            document.getElementById("bodyDiv").style.backgroundColor="#303030";
+            document.getElementById("bodyDiv2").style.backgroundColor="#303030";
             document.getElementsByClassName("bgc")[0].style.backgroundColor = "yellow";
-            document.getElementsByClassName("bgc2")[0].style.backgroundColor = "#52493B";
-            document.getElementsByClassName("bgc3")[0].style.backgroundColor = "#0C3F1C";
-            document.getElementsByClassName("bgc4")[0].style.backgroundColor = "#0C3F1C";
-            document.body.style.backgroundColor="#333236";
+            document.getElementsByClassName("bgc2")[0].style.backgroundColor = "#000";
+            document.getElementsByClassName("bgc3")[0].style.backgroundColor = "#303030";
+            document.getElementsByClassName("bgc4")[0].style.backgroundColor = "#303030";
+            document.body.style.backgroundColor="#181818";
+            // document.body.style.backgroundColor="#333236";
 
         } else {
             $this.text('DARK');

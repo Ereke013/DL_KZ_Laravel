@@ -19,16 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cf412b-c7ff-4877-9478-d7e246efe456" name="Default Changelist" comment="adding css">
+    <list default="true" id="47cf412b-c7ff-4877-9478-d7e246efe456" name="Default Changelist" comment="add night theme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RolesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RolesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/MyProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/MyProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/helloPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/helloPage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/user_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/user_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/choose.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/choose.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/userPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/userPage.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,22 +178,22 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\dlyeahboy\storage\app\public" />
-      <recent name="C:\xampp\htdocs\dlyeahboy\storage" />
-      <recent name="C:\xampp\htdocs\dlyeahboy\resources\views" />
-      <recent name="C:\xampp\htdocs\dlyeahboy\resources\views\inc" />
-      <recent name="C:\xampp\htdocs\dlyeahboy\resources\views\layout" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\dlyeahboy\public" />
       <recent name="C:\xampp\htdocs\dlyeahboy\resources\views\layout" />
+      <recent name="C:\xampp\htdocs\dlyeahboy\resources\views\inc" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ERLAN-PC\Desktop\dlyeahboyyyyyyy\storage\app\public\img" />
+      <recent name="C:\xampp\htdocs\dlyeahboy\storage\app\public" />
+      <recent name="C:\xampp\htdocs\dlyeahboy\storage" />
+      <recent name="C:\xampp\htdocs\dlyeahboy\resources\views" />
       <recent name="C:\xampp\htdocs\dlyeahboy\resources\views\inc" />
     </key>
   </component>
@@ -208,7 +206,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="199bb090-91ef-4b7a-a2ef-3d2863d76f78" name="Default Changelist" comment="" />
+      <changelist id="47cf412b-c7ff-4877-9478-d7e246efe456" name="Default Changelist" comment="add night theme" />
       <created>1606054907599</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -236,6 +234,8 @@
       <workItem from="1607282671378" duration="1190000" />
       <workItem from="1607333943891" duration="748000" />
       <workItem from="1607506951193" duration="3021000" />
+      <workItem from="1608875694180" duration="2443000" />
+      <workItem from="1608878213874" duration="7542000" />
     </task>
     <task id="LOCAL-00001" summary="Student profile page is ready">
       <created>1606947590981</created>
@@ -272,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608825189213</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add night theme">
+      <created>1608849923479</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608849923479</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +303,8 @@
     <MESSAGE value="before installation auth" />
     <MESSAGE value="pochti bitti" />
     <MESSAGE value="adding css" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding css" />
+    <MESSAGE value="add night theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="add night theme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="91" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606077913018">
@@ -339,10 +347,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1606231702831" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1608825248423">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1608849943468">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1608825248423" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1608849943468" />
     <state x="97" y="98" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1608835516400">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

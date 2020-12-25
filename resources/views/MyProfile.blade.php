@@ -12,8 +12,8 @@
             <div class="col-sm-12">
                 <div class="card" id="crd">
                     <div class="card-body">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
+                        <nav aria-label="breadcrumb" >
+                            <ol class="breadcrumb" id="ak">
                                 <li class="breadcrumb-item"><a href="{{route('dlKz')}}" style="font-size: 20px">dl.yeahboy.kz</a>
                                 </li>
                                 <!--                        <li class="breadcrumb-item" style="font-size: 20px"><a href="mark.html">Marks</a></li>-->
@@ -54,7 +54,7 @@
                         <div class="card-title"><h3>My courses</h3></div>
                         <!--                <p style="font-size: 15px;"><strong>Sapakova S.</strong></p>-->
                         <br>
-                        <div class="card" style="background-color: #F2F2F2">
+                        <div class="card" style="background-color: #F2F2F2" id="ak2">
                             <div class="card-text mt-3 ml-3">
                                 <?php
 //                                $stud = request()->session()->get('student');

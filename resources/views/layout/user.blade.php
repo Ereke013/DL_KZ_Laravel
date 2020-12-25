@@ -41,7 +41,7 @@
     $('.theme').click(function(){
         var $this = $(this);
         $this.toggleClass('theme');
-        if($this.hasClass('theme')){
+        if(!$this.hasClass('theme')){
             $this.text('LIGHT');
             // document.body.style.color=[yellow];
             document.getElementsByClassName("stylebutton")[0].style.backgroundColor = "yellow";
@@ -54,6 +54,12 @@
             document.getElementById("crd").style.backgroundColor="#3A3837"
             document.getElementById("crd2").style.backgroundColor="#3A3837"
             document.getElementById("crd3").style.backgroundColor="#3A3837"
+            if(document.getElementById("ak") != null){
+                document.getElementById("ak").style.backgroundColor="#202020"
+            }
+            if(document.getElementById("ak2") != null){
+                document.getElementById("ak2").style.backgroundColor="#202020"
+            }
             for (var i=0, max=all.length; i < max; i++) {
                 all[i].style.color = "yellow";
             }
@@ -82,7 +88,9 @@
                 allli[i].style.color = "yellow";
             }
 
+
             document.getElementById("erekshe").style.backgroundColor=""
+
 
 
         } else {
@@ -99,6 +107,13 @@
             document.getElementById("crd").style.backgroundColor=""
             document.getElementById("crd2").style.backgroundColor=""
             document.getElementById("crd3").style.backgroundColor=""
+
+            if(document.getElementById("ak") != null){
+                document.getElementById("ak").style.backgroundColor=""
+            }
+            if(document.getElementById("ak2") != null){
+                document.getElementById("ak2").style.backgroundColor=""
+            }
 
             document.body.style.backgroundColor="";
             for (var i=0, max=all.length; i < max; i++) {
@@ -128,7 +143,7 @@
             for (var i=0, max=allli.length; i < max; i++) {
                 allli[i].style.color = "";
             }
-
+            document.getElementById("crd3").style.backgroundColor=""
             document.getElementById("erekshe").style.backgroundColor="#F2F2F2"
         }
     });
